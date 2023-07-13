@@ -1,0 +1,201 @@
+.events-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(157, 215, 232, 0.819);
+  padding-bottom: 25px;
+  min-height: 80vh;
+}
+
+.events-header {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.header-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  margin-right: 5px;
+  margin-left: 5px; 
+}
+
+.header-buttons button {
+  background: none;
+  border: none;
+  margin-left: 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+.header-buttons button i {
+  font-size: inherit;
+}
+
+.header-buttons button.selected {
+  color: #0077cc;
+}
+.header-buttons button:hover {
+  color: #0077cc;
+}
+
+.events-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 95vw;
+}
+
+.event-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 16px;
+  width: calc(95% - 32px);
+  border-top: 3px solid #0077cc;
+}
+
+.events-upcoming-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw;
+  margin-top: 20px;
+}
+
+.event-card-info {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.event-card-title {
+  font-size: 24px;
+  font-weight: bold;
+  width: 20%;
+  margin-right: 16px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+}
+
+.event-card-date {
+  font-size: 18px;
+  font-weight: bold;
+  width: 20%;
+  margin-right: 14px;
+  margin-left: 14px;
+}
+
+.event-card-time {
+  font-size: 16px;
+  width: 15%;
+  margin-right: 20px;
+}
+.event-card-location {
+  font-size: 16px;
+  width: 15%;
+  margin-left: 20px;
+}
+
+.event-card-description {
+  font-size: 16px;
+  width: 30%;
+  margin-right: 14px;
+  margin-left: 14px;
+}
+
+.fc-toolbar-chunk {
+  margin-left: 5px;
+  margin-top: 15px;
+}
+
+.fc-next-button.fc-button.fc-button-primary {
+  margin-left: 3px;
+}
+
+.calendar-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.calendar-modal-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.calendar-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.calendar-modal-header h2 {
+  margin: 0;
+}
+
+.calendar-modal-header button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.fc-media-screen {
+  height: 85vh;
+  min-width: 85vw;
+}
+
+.fc-daygrid-day-frame {
+  height: 15vh; 
+}
+
+.fc-daygrid-day-events {
+  height: auto;
+  max-height: 10vh;
+  white-space: normal;
+  display: flex;
+  flex-direction: column;
+}
+--
+.fc-daygrid-event {
+  display: flex;
+  align-items: flex-start;
+}
+
+.fc-daygrid-event-dot {
+  height: 3px;
+  width: 3px;
+  border-radius: 50%;
+  align-self: flex-start;
+}
+
+.fc-event-time {
+  font-size: 12px;
+  margin-right: 4px;
+  align-self: flex-start;
+}
+
+.fc-event-title {
+  font-size: 12px;
+  line-height: 1.2;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+}

@@ -1,0 +1,120 @@
+.pricing {
+  padding: 20px;
+  padding-top: 5px;
+  text-align: center;
+  background-color: #f2f2f2;
+  background-image: url('https://bloximages.newyork1.vip.townnews.com/times-online.com/content/tncms/assets/v3/editorial/8/a8/8a82356a-2532-11eb-9693-f3bbc81fa0e8/5fadb0b137dcc.image.jpg');
+  background-size: cover;
+  min-height: 80vh;
+}
+
+.top-text {
+  padding: 20px;
+  background-color: rgba(157, 215, 232, 0.819);
+  backdrop-filter: blur(3px);
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-top: 17px;
+}
+
+.top-text h1 {
+  font-size: 3rem;
+  margin: 0;
+  text-shadow: -1px -1px 0 #6c2c7f, 1px -1px 0 #6c2c7f, -1px 1px 0 #6c2c7f, 1px 1px 0 #6c2c7f;
+  color: #ffa500; 
+}
+
+.top-text h1 span {
+  border-bottom: 2px solid #ffa500;
+}
+
+.top-text h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  text-shadow: -1px -1px 0 #6c2c7f, 1px -1px 0 #6c2c7f, -1px 1px 0 #6c2c7f, 1px 1px 0 #6c2c7f;
+  color: #ffa500;
+  letter-spacing: 0.05em;
+}
+
+.top-text h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  text-shadow: -1px -1px 0 #6c2c7f, 1px -1px 0 #6c2c7f, -1px 1px 0 #6c2c7f, 1px 1px 0 #6c2c7f;
+  color: #ffa500;
+  letter-spacing: 0.05em;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  background-color: #fffafa;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.card-header h2 {
+  margin: 0;
+}
+
+.badge {
+  background-color: #add8e6;
+  padding: 5px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.card-content {
+  padding: 10px;
+  border-top: 1px solid #87cefa;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.price {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 5px 0;
+}
+
+li:before {
+  color: #87cefa;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+@media (max-width: 800px) {
+  .cards-container {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+  }
+}

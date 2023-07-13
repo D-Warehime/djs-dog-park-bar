@@ -1,0 +1,105 @@
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(157, 215, 232, 0.819);
+  }
+  
+  .profile-info {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .basic-info p {
+    margin: 5px;
+  }
+  
+  .edit-button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 2px solid #555;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 5px;
+  }
+  
+  .edit-button:hover {
+    background-color: #555;
+    color: #fff;
+  }
+  
+  
+  .dog-card {
+    background-color: #F5F5DC;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #888888;
+    padding: 20px;
+    margin: 10px;
+    margin-bottom: 15px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .dog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  .dog-card h3 {
+    margin-top: 0px;
+  }
+  
+  .dog-card-image {
+    width: 50px;
+    height: 50px;
+    background-color: #ddd;
+    background-image: url('https://via.placeholder.com/100');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    margin-right: 20px;
+    position: absolute;
+    top: 5px;
+    right: 85px;
+  }
+  
+  .dog-card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+  }  
+  
+  .health-info {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+ .health-info span {
+    margin-left: 5px;
+ }
+
+  .green-arrow, .red-x {
+    font-size: 24px;
+  }
+  
+  .green-arrow {
+    color: green;
+  }
+  
+  .red-x {
+    color: red;
+  }
+  
