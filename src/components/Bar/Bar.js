@@ -19,28 +19,69 @@ function Bar() {
     fetchMenuItems();
   }, []);
 
+  const formatPrice = (price) => {
+    return `$${price.toFixed(2)}`;
+  };
+
+  const groupByCategory = (items) => {
+    return items.reduce((groupedItems, item) => {
+      (groupedItems[item.category] = groupedItems[item.category] || []).push(item);
+      return groupedItems;
+    }, {});
+  };
+
+  const getCategoryTitle = (category) => {
+    switch (category) {
+      case 'NA':
+        return 'Non-Alcoholic';
+      case 'Beer':
+        return 'Brewery';
+      case 'Wine':
+        return 'Winery';
+      case 'Mead':
+        return 'Meadery';
+      case 'Cider':
+        return 'Cidery';
+      case 'Cocktail':
+      case 'Spirit':
+        return 'Distiller/Producer';
+      case 'Seltzer':
+        return 'Producer';
+      default:
+        return category;
+    }
+  };
+
+  const groupedItems = groupByCategory(menuItems);
+
   return (
     <div className="bar-menu">
       <h1>Bar Menu</h1>
-      {menuItems.map((item) => (
-        <div key={item._id}>
-          <h2>{item.category}</h2>
+      {Object.keys(groupedItems).map((category) => (
+        <div key={category}>
+          <h2>{getCategoryTitle(category)}</h2>
           <table>
             <thead>
               <tr>
                 <th>Name</th>
-                <th>{item.type === 'drink' ? 'Brewery' : 'Region'}</th>
-                {item.type === 'drink' && <th>ABV</th>}
+                <th>{getCategoryTitle(category)}</th>
+                <th>ABV</th>
+                <th>Size (oz)</th>
+                <th>Description</th>
                 <th>Price</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>{item.name}</td>
-                <td>{item.type === 'drink' ? item.variety : item.description}</td>
-                {item.type === 'drink' && <td>{item.abv}%</td>}
-                <td>x</td>
-              </tr>
+              {groupedItems[category].map((item) => (
+                <tr key={item._id}>
+                  <td>{item.name}</td>
+                  <td>{item.source}</td>
+                  <td>{item.abv}%</td>
+                  <td>{item.size}</td>
+                  <td>{item.description}</td>
+                  <td>{formatPrice(item.price)}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
